@@ -12,7 +12,7 @@ class HistoryController extends Controller
     public function index()
     {
         $orders = Order::where('user_id', Auth::id())
-            ->where('status', 'success')
+            ->whereIn('status', ['success', 'delivery'])
             ->get();
 
         return view('user.product.history', compact('orders'));

@@ -67,7 +67,7 @@ class CheckoutController extends Controller
         $remainingCart = array_diff_key($cart, array_flip($selectedProducts));
         session()->put("cart_{$userId}", $remainingCart);
 
-        RevertProductStatusUpdate::dispatch($order)->delay(now()->addSeconds(200));
+        RevertProductStatusUpdate::dispatch($order)->delay(now()->addSeconds(120));
 
         return redirect()->route('checkout.index');
         // ->with('success', 'Order created successfully!');

@@ -1,4 +1,4 @@
-<footer class="p-8 mx-auto bg-gray-100 text-sm border-t-[1px] border-slate-300">
+<footer class="p-8 bg-gray-100 text-sm border-t-[1px] border-slate-300">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 md:gap-8">
         <div class="mb-8 md:mb-0">
             <h4 class="font-bold mb-4">Thriftify</h4>
@@ -65,14 +65,12 @@
                 </a>
             </div>
         </div>
-    </div>
-    <div class="flex justify-between items-center mt-8">
-        <div class="mb-4 md:mb-0">
-            <span class="text-gray-700">&copy;
-                <script>
-                    document.write(new Date().getFullYear())
-                </script>2024 © Design & Develop by Thriftify Dev Team.
-            </span>
+        <div class="flex justify-between items-center mt-8">
+            <div class="mb-4 md:mb-0">
+                <span class="text-gray-700">&copy;
+                    2024 © Design & Develop by Thriftify Dev Team.
+                </span>
+            </div>
         </div>
     </div>
 </footer>

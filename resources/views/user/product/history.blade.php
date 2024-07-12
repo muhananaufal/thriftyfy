@@ -6,6 +6,9 @@
     <main class="bg-gray-100 mb-auto flex-grow font-poppins min-h-screen">
         <div class="px-8 py-12" x-data="{ tab: 'needconfirm' }">
             <h1 class="font-bold text-2xl">History</h1>
+            <p class="text-sm pl- py-2">Your orders will automatically expired
+                after 15seconds system from checkout</p>
+
 
             <div class="flex gap-5 items-center mb-4">
                 <!-- search bar -->

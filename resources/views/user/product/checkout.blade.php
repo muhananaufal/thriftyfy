@@ -7,7 +7,7 @@
         <div class="px-8 py-12" x-data="{ tab: 'needconfirm' }">
             <h1 class="font-bold text-2xl">Checkout</h1>
             <p class="text-sm pl- py-2">Your orders will automatically expired
-                after 200seconds system from checkout</p>
+                after 120seconds system from checkout</p>
 
 
             <div class="flex gap-5 items-center mb-4">
@@ -120,7 +120,8 @@
                                                             <p>Order Details</p>
                                                         </a>
 
-                                                        <a href="{{ route('checkout.pay', $order->id) }}" onclick="event.preventDefault(); document.getElementById('pay').submit();"
+                                                        <a href="{{ route('checkout.pay', $order->id) }}"
+                                                            onclick="event.preventDefault(); document.getElementById('pay').submit();"
                                                             class="flex gap-2 items-center px-4 py-2 text-sm hover:bg-green-100 text-green-500"role="menuitem"
                                                             tabindex="-1" id="user-menu-item-0">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="20"
@@ -129,7 +130,8 @@
                                                                 stroke-linecap="round" stroke-linejoin="round">
                                                                 <polyline points="20 6 9 17 4 12"></polyline>
                                                             </svg>
-                                                            <form id="pay" action="{{ route('checkout.pay', $order->id) }}"
+                                                            <form id="pay"
+                                                                action="{{ route('checkout.pay', $order->id) }}"
                                                                 method="POST" class="hidden">
                                                                 @csrf
                                                                 @method('put')

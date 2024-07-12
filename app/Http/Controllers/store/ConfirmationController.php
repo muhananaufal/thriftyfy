@@ -59,7 +59,7 @@ class ConfirmationController extends Controller
             $product->save();
         }
 
-        ProcessOrderStatusUpdate::dispatch($orderId)->delay(now()->addSeconds(200));
+        ProcessOrderStatusUpdate::dispatch($orderId)->delay(now()->addSeconds(15));
 
         return redirect()->route('store.confirmation.index');
         // ->with('success', 'Order confirmed successfully.');
